@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="abc.php" method="post" name="myForm">
+        <div>
+            <label for="fullName">Full Name: </label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div>
+            <label for="web">Website link: </label>
+            <input type="url" id="web" name="" required>
+        </div>
+        <div>
+            <label for="siblings">Number of siblings: </label>
+            <input type="number" id="siblings" name="siblings" value="0" min="0" required>
+        </div>
+        <div>
+            <input type="radio" name="gender" id="male"><label for="male">Male</label>
+            <input type="radio" name="gender" id="female"><label for="female">Female</label>
+        </div>
+        <div>
+            <label for="mail">Email address: </label>
+            <input type="email" id="mail" name="mail" required>
+        </div>
+        <div>
+            <label for="pass">Password: </label>
+            <input type="password" id="pass" name="pass" required>
+        </div>
+        <div>
+            <input type="checkbox" id="check" name="check">
+            <label for="check">I have read and agreed to the terms and conditions</label>
+        </div>
+        <div>
+            <label for="choose">Select your size: </label>
+            <select id="choose" name="choose">
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+            </select>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+            const form = document.forms['myForm']
+            form.addEventListener('submit', (event) => {
+            event.preventDefault()
+            const FD = new FormData(form)
+            if (trim(FD.get('fulName')) == ''){
+                alter('Please provide a valid full name')
+                return
+            }
+            if (!document.getElementById('male').checked && !document.getElementById('female').checked){
+                alert ('Please select your gender')
+                return
+            }
+            
+            if (!FD.get('check')){
+                alter('Terms & conditions must be accepted')
+                return
+               }
+            else
+                alter('Submitted successfully')
+        })
+    </script>
+</body>
+</html>
