@@ -1,0 +1,104 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+.hide-md-lg{
+    display: none;
+}
+
+.container {
+    background-color: #f2f2f2;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.container .row{
+    padding-top: 30px;
+}
+
+.fb{
+    background-color: #5770a6;
+}
+
+.twitter{
+    background-color: #6bd7ef;
+}
+
+.google{
+    background-color: #e06555;
+}
+
+input[type="submit"]{
+    background-color: #28b581;
+}
+
+.bottom-container{
+    background-color: #666666;
+}
+
+.bottom-container .row{
+    display: flex;
+}
+
+.bottom-container .col{
+    width: 50%;
+    text-align: center;
+    padding: 18px 0;
+}
+
+.bottom-container a{
+    text-decoration: none;
+}
+
+#login{
+    display: flex;
+}
+
+#login .col{
+    width: 50%;
+    text-align: center;
+}
+
+input, #login a{
+    color: white;
+    display: inline-block;
+    width: 80%;
+    text-decoration: none;
+    padding: 13px 0 13px 3%;
+    text-align: left;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+input{
+    border: none;
+}
+
+input[type="text"], input[type="password"]{
+    color: black;
+}
+
+input[type="submit"]{
+    background-color: #28b581;
+    text-align: center;
+    width: 83%;
+}
+
+.vl{
+    position: absolute;
+    left: 49.8%;
+    bottom: 18;
+    height: 156px;
+    width: 3.5px;
+    background-color: lightgray;
+}
+
+span{
+    position: relative;
+    top: 63px;
+    right: 13px;
+    border-radius: 50%;
+    border: 1px solid darkgrey;
+    padding: 7px;
+    background-color: #f2f2f2;
+}
